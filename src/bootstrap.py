@@ -89,7 +89,8 @@ def main():
 
         user_friends_array.insert(0, user)
 
-        result_data.append(user_friends_array)
+        if len(user_friends_array) > 1:
+            result_data.append(user_friends_array)
 
         i += 1
 
@@ -121,7 +122,7 @@ def main():
             if values:
                 key = values[0]
                 values = values[1:]
-                outfile.write(f"{key}: {','.join(values)}\n")
+                outfile.write(f"{key}: {','.join(values)}\n")  # OUTPUT FORMAT
 
     print(f"Данные успешно преобразованы и записаны в файл {output_file}")
 
